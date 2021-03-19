@@ -1,0 +1,12 @@
+---
+title: "Assingment5_bonus"
+author: "Ahmed Mostafazayoud"
+date: "3/19/2021"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+
+https://github.com/Ahmad-Zyoud/stats3ds3
