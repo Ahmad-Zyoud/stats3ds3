@@ -1,5 +1,5 @@
 ---
-title: "Lab 8: Github, classification trees, bagging, RF, boosting"
+title: "Lab 9: To Be Completed"
 output: 
   learnr::tutorial
 bibliography: www/STATS3DS3.bib
@@ -12,7 +12,6 @@ library(tidyverse)
 library(learnr)
 library(GGally)
 library(kableExtra)
-fdsfgdg
 ```
 
 ## Recap
@@ -507,10 +506,19 @@ For k-medoid for clustering, based on the average Silhouette width, we can use $
 ```{r eval=FALSE}
 data(votes.repub) # from cluster package
 votes.repub_scaled <- scale(votes.repub)
-votes.repub_kmeans <- kmeans(votes.repub_scaled, 2)
+#votes.repub_kmeans <- kmeans(votes.repub_scaled, 2)
 ```
 
 Why kmean() doesn't work?
+* The reason the code above does not work is because the dataset contains NA values. The function is not equipt to deal with them. 
+* We can fix it with the following code
+
+```{r}
+data(votes.repub) # from cluster package
+votes.repub_scaled <- scale(votes.repub)
+votes.repub_kmeans <- kmeans(na.omit(votes.repub_scaled), 2)
+```
+
 
 ### Hierarchical clustering - divisive clustering
 
